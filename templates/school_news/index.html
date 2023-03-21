@@ -7,16 +7,13 @@
         <style>
             body {background-color :yellow;
             }
-            h2 {
-                font-size : 45px;
-            }
             p.byline {
                 font-style : italic;
-                font-size : 25px;
             }
             h1 {
                 text-align : center;
-                font-size : 55px;
+            }
+            strong {font-size : 30px;
             }
 
         </style>
@@ -25,8 +22,9 @@
     <body>
         <h1>School News</h1>
         <div>
-            Brought to you at great effort... <br />
+            Brought to you at great emotional cost... <br />
             <strong>{{ boldmessage }}</strong>
+            <hr>
         </div>
 
         <div>
@@ -34,9 +32,7 @@
                 <ul>
                 {% for NewsItem in NewsItems %}
                     <h2>{{ NewsItem.title }}</h2>
-                    <br>
                     <p class = "byline">{{ NewsItem.author }} - {{ NewsItem.date }}</p>
-                    <br>
                     {{ NewsItem.story }}
                     <br>
                 {% endfor %}
